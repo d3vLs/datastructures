@@ -1,4 +1,4 @@
-// we compare the elements to the left with current value and shifts them to the right one bye one if
+// we compare the elements to the left with current value and shifts them to the right one by one if
 // current value is smaller than the elements on the left until we run out of elements on the left and
 // then we place the value at very first index of the loop
 //
