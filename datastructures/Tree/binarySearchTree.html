@@ -6,6 +6,110 @@
     <title>Document</title>
   </head>
   <body>
+    <div class="tree">
+      <div class="node root circle">
+        <p class="value">10</p>
+        <div class="edge">
+          <div class="edgeLeft"></div>
+          <div class="edgeRight"></div>
+        </div>
+        <div class="childNodes">
+          <div class="node leftRoot">
+            <p class="value">2</p>
+            <div class="edge">
+              <div class="edgeLeft"></div>
+              <div class="edgeRight"></div>
+            </div>
+            <div class="node childNodes">
+              <div class="leftRoot">
+                <p class="value">4</p>
+              </div>
+              <div class="rightRoot">
+                <p class="value">44</p>
+              </div>
+            </div>
+          </div>
+          <div class="node rightRoot circle">
+            <p class="value">14</p>
+            <div class="edge">
+              <div class="edgeLeft"></div>
+              <div class="edgeRight"></div>
+            </div>
+            <div class="leftRoot">
+              <p class="value">22</p>
+            </div>
+            <div class="rightRoot">
+              <p class="value">60</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="binarySearchTree.js"></script>
+    <style>
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        box-sizing: border-box;
+        padding: 0;
+      }
+
+      body {
+        /* height: 100vh; */
+        display: grid;
+        place-items: center;
+      }
+      .node {
+        /* display: grid; */
+        /* align-content: center; */
+      }
+      .value {
+        display: grid;
+        place-content: center;
+        width: 50px;
+        text-align: center;
+        aspect-ratio: 1;
+        border: 2px solid red;
+        border-radius: 100%;
+      }
+      .edge {
+        display: flex;
+      }
+      .edgeLeft {
+        width: 2px;
+        height: 40px;
+        background-color: black;
+        transform: rotate(40deg);
+        margin: 0px -5px;
+      }
+      .edgeRight {
+        width: 2px;
+        height: 40px;
+        background-color: black;
+        transform: rotate(140deg);
+        margin: 0px 60px;
+      }
+      .left {
+        /* margin-left: -60px; */
+      }
+      .childNodes {
+        display: inline-flex;
+        /* gap: 80px; */
+      }
+      .rightRoot {
+        /* display: inline-flex; */
+        border: 2px solid blue;
+        /* margin-left: 130px; */
+      }
+      .leftRoot {
+        /* width: 200px; */
+        border: 2px solid green;
+        /* display: inline-flex; */
+        /* flex-direction: row; */
+        /* gap: 80px; */
+        margin-left: -70px;
+      }
+    </style>
   </body>
 </html>
