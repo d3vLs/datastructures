@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <form name="submitForm" onsubmit="handleSubmit(e)">
+      <label for="firstName">First Name</label>
+      <input id="firstName" name="firstName" type="text" />
+      <br />
+      <br />
+      <label for="lastName">Last Name</label>
+      <input id="lastName" name="lastName" type="text" />
+      <br />
+      <br />
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" />
+      <br />
+      <br />
+      <label for="address">Address</label>
+      <input id="address" name="address" type="text" />
+      <br />
+      <br />
+
+      <p>
+        Select Your Course:
+        <select value="" name="Subject">
+          <option>Select Course</option>
+          <option>BTECH</option>
+          <option>BBA</option>
+          <option>BCA</option>
+          <option>B.COM</option>
+        </select>
+      </p>
+      <br />
+      <br />
+      <input type="submit" value="Submit" />
+      <input type="reset" value="Reset" />
+    </form>
+    <script>
+      function handleSubmit(e) {
+        e.preventDefault();
+        const firstName = document.forms.submitForm.firstName.value;
+        const lastName = document.forms.submitForm.lastName.value;
+        const email = document.forms.submitForm.email.value;
+        const address = document.forms.submitForm.address.value;
+        console.log(firstName, lastName, email, address);
+      }
+    </script>
+  </body>
+</html>
